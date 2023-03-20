@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+int tabel[10]={14,15,8,33,24,68,5,2,89,21};
+int main()
+{
+	
+	int i;
+	int j;
+	int bil_cari;
+	int k;
+	bool ketemu;
+	
+	i=0;
+	j=9;
+	bil_cari=14;
+	ketemu=false;
+	
+    while((ketemu==0)&&(i<=j))
+    {
+    	k=(int)(i+j)/2;
+    	if(tabel[k]==bil_cari)
+		{
+			ketemu=true;
+		}
+		else
+		{
+			if(tabel[k]>bil_cari)
+			{
+				j=k-1;
+			}
+			else
+			{
+				i=k+1;
+			}
+		}
+	}
+	if(ketemu==true)
+	{
+		cout<<"terdapat indeks "<<bil_cari<<endl;
+	}
+	else
+	{
+		cout<<"tidak ditemukan"<<endl;
+	}
+	
+return 0;
+		
+	}
